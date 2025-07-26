@@ -61,3 +61,22 @@ def generate_salary_slip():
 
 
 generate_salary_slip()
+
+
+def calculate_series_sum(x, n):
+    series_sum = 1  # Start with the first term: 1
+    for i in range(2, n + 1):
+        term = (x**i) / i
+        series_sum += term
+    return series_sum
+
+
+# Input from the user
+x = float(input("Enter the value of x: "))
+n = int(input("Enter the value of n (number of terms): "))
+
+# Calculate the sum of the series
+result = calculate_series_sum(x, n)
+
+# Display the result
+print(f"\nSum of the series S = 1 + x^2/2 + x^3/3 + ... + x^{n}/{n} is: {result:.4f}")
